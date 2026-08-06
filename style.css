@@ -51,7 +51,4 @@ body {
 	font-size: 14px;
 }
 
-/* Klasa pomocnicza do ukrywania elementów w JS */
-.hidden {
-	display: none !important;
-}
+.hidden { display: none !important; }

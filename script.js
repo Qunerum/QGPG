@@ -1,16 +1,13 @@
 async function loadGitHubStats() {
 	try {
-		// 1. Pobieramy plik konfiguracyjny config.json
 		const configResponse = await fetch('config.json');
 		if (!configResponse.ok) throw new Error("Nie udało się wczytać pliku config.json");
 		const config = await configResponse.json();
 
-		// 2. Pobieramy dane z oficjalnego API GitHuba dla zdefiniowanego użytkownika
 		const apiResponse = await fetch(`https://api.github.com/users/${config.username}`);
 		if (!apiResponse.ok) throw new Error("Nie znaleziono takiego użytkownika na GitHubie!");
 		const data = await apiResponse.json();
 
-		// 3. Obsługa nagłówka (Avatar i nazwa)
 		const headerSection = document.getElementById('headerSection');
 		if (!config.showAvatar && !config.showName) {
 			headerSection.classList.add('hidden');
@@ -30,7 +27,6 @@ async function loadGitHubStats() {
 			}
 		}
 
-		// 4. Obsługa repozytoriów (Widoczne / Niewidoczne)
 		const repoRow = document.getElementById('repoRow');
 		if (config.showRepos) {
 			document.getElementById('repoCount').textContent = data.public_repos;
@@ -38,7 +34,6 @@ async function loadGitHubStats() {
 			repoRow.classList.add('hidden');
 		}
 
-		// 5. Obsługa obserwujących (Widoczne / Niewidoczne)
 		const followersRow = document.getElementById('followersRow');
 		if (config.showFollowers) {
 			document.getElementById('followersCount').textContent = data.followers;
@@ -46,7 +41,6 @@ async function loadGitHubStats() {
 			followersRow.classList.add('hidden');
 		}
 
-		// 6. Obsługa obserwowanych (Widoczne / Niewidoczne)
 		const followingRow = document.getElementById('followingRow');
 		if (config.showFollowing) {
 			document.getElementById('followingCount').textContent = data.following;
@@ -60,5 +54,4 @@ async function loadGitHubStats() {
 	}
 }
 
-// Uruchomienie funkcji po załadowaniu strony
 loadGitHubStats();
