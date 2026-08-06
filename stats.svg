@@ -1,0 +1,16 @@
+<svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+		<style>
+		.bg { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 12px; }
+		.text-title { fill: #f0f6fc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: bold; }
+		.text-sub { fill: #8b949e; font-family: sans-serif; font-size: 13px; }
+		.text-stat { fill: #c9d1d9; font-family: sans-serif; font-size: 14px; }
+		</style>
+
+		<!-- Tło karty -->
+		<rect width="400" height="180" class="bg" />
+		
+			<text x="24" y="38" class="text-title">Qunerum</text>
+			<text x="24" y="58" class="text-sub">@Qunerum</text>
+			    <text x="24" y="95" class="text-stat">📦 Publiczne repozytoria: 14</text>
+    <text x="24" y="119" class="text-stat">👥 Obserwujący: 7</text>
+</svg>
