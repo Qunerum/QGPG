@@ -1,16 +1,78 @@
-<svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+<svg width="412" height="312" viewBox="0 0 412 312" xmlns="http://www.w3.org/2000/svg">
 		<style>
-		.bg { fill: #161b22; stroke: #30363d; stroke-width: 1; rx: 12px; }
-		.text-title { fill: #f0f6fc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: bold; }
-		.text-sub { fill: #8b949e; font-family: sans-serif; font-size: 13px; }
-		.text-stat { fill: #c9d1d9; font-family: sans-serif; font-size: 14px; }
+		.bg {
+			fill: #161B22;
+			stroke: #F0B2BC;
+			stroke-width: 6;
+			rx: 12px;
+		}
+		.displayName {
+			fill: #EEEEEE;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.login {
+			fill: #666666;
+			font-family: sans-serif;
+			font-size: 12px;
+		}
+		.bio {
+			fill: #EEEEEE;
+			font-family: sans-serif;
+			font-size: 12px;
+		}
+		.text-stat {
+			fill: #C9D1D9;
+			font-family: sans-serif;
+			font-size: 14px;
+		}
+		.lang-text {
+			fill: #C9D1D9;
+			font-family: sans-serif;
+			font-size: 12px;
+		}
 		</style>
 
-		<!-- Tło karty -->
-		<rect width="400" height="180" class="bg" />
+		<rect x="6" y="6" width="400" height="300" class="bg"/>
 		
-			<text x="24" y="38" class="text-title">Qunerum</text>
-			<text x="24" y="58" class="text-sub">@Qunerum</text>
-			    <text x="24" y="95" class="text-stat">📦 Publiczne repozytoria: 14</text>
-    <text x="24" y="119" class="text-stat">👥 Obserwujący: 7</text>
-</svg>
+			<defs>
+			<clipPath id="avatar-clip">
+			<circle cx="70" cy="70" r="46"/>
+			</clipPath>
+			</defs>
+			<circle cx="70" cy="70" r="46" fill="none" stroke="#A90000" stroke-width="6"/>
+			<image
+			href="https://avatars.githubusercontent.com/u/214378633?v=4"
+			x="24" y="24"
+			width="92" height="92"
+			clip-path="url(#avatar-clip)"
+			/>
+				<text x="136" y="40" class="displayName">Qunerum</text>
+	<text x="136" y="56" class="login">@Qunerum</text>
+	<text x="136" y="72" class="bio">C Mid Developer
+PL/RU
+Arch Linux</text>
+	<text x="24" y="138" class="text-stat">Public repositories: 14</text>
+	<text x="24" y="162" class="text-stat">Followers: 8</text>
+<g>
+    <g transform="translate(330, 230)">
+        <circle cx="0" cy="0" r="45" fill="none" stroke="#21262d" stroke-width="14" />
+        <circle cx="0" cy="0" r="45" fill="none" stroke="#58a6ff" stroke-width="14" stroke-dasharray="170.35378549217106 112.38955333091033" stroke-dashoffset="0" />
+        <circle cx="0" cy="0" r="45" fill="none" stroke="#3fb950" stroke-width="14" stroke-dasharray="110.89676569400261 171.84657312907876" stroke-dashoffset="-170.35378549217106" />
+        <circle cx="0" cy="0" r="45" fill="none" stroke="#d29922" stroke-width="14" stroke-dasharray="1.117396885627856 281.62594193745355" stroke-dashoffset="-281.25055118617365" />
+        <circle cx="0" cy="0" r="45" fill="none" stroke="#f85149" stroke-width="14" stroke-dasharray="0.3753907512798643 282.36794807180155" stroke-dashoffset="-282.3679480718015" />
+    </g>
+    <!-- Legenda: C -->
+    <rect x="150" y="194" width="10" height="10" rx="2" fill="#58a6ff" />
+    <text x="166" y="203" class="lang-text">C (60.3%)</text>
+    <!-- Legenda: C# -->
+    <rect x="150" y="212" width="10" height="10" rx="2" fill="#3fb950" />
+    <text x="166" y="221" class="lang-text">C# (39.2%)</text>
+    <!-- Legenda: JavaScript -->
+    <rect x="150" y="230" width="10" height="10" rx="2" fill="#d29922" />
+    <text x="166" y="239" class="lang-text">JavaScript (0.4%)</text>
+    <!-- Legenda: Makefile -->
+    <rect x="150" y="248" width="10" height="10" rx="2" fill="#f85149" />
+    <text x="166" y="257" class="lang-text">Makefile (0.1%)</text>
+</g></svg>
