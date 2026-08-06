@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-// --- FUNKCJA POBIERAJĄCA JĘZYKI ZE WSZYSTKICH REPO ---
 async function fetchAllLanguages(username, token) {
 	const headers = {};
 	if (token) {
@@ -110,7 +109,12 @@ async function run() {
 		if (!response.ok) {
 			throw new Error(`Cannot get user data: ${response.statusText}`);
 		}
-		const data = await response.json();
+		const data = await response.json(),
+		avatarRes = await fetch(data.avatar_url),
+		avatarBuffer = await avatarRes.arrayBuffer(),
+		avatarBase64 = Buffer.from(avatarBuffer).toString('base64'),
+		avatarDataUrl = `data:image/png;base64,${avatarBase64}`;
+
 		let w = config.width + config.sizes.background_frame * 2,
 		h = config.height + config.sizes.background_frame * 2,
 		svgContent = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +165,7 @@ async function run() {
 			</defs>
 			<circle cx="${x + config.sizes.profile_radius}" cy="${y + config.sizes.profile_radius}" r="${config.sizes.profile_radius}" fill="none" stroke="#${config.colors.profile_frame}" stroke-width="${config.sizes.profile_frame_size}"/>
 			<image
-			href="${data.avatar_url}"
+			href="${avatarDataUrl}"
 			x="${x}" y="${y}"
 			width="${config.sizes.profile_radius * 2}" height="${config.sizes.profile_radius * 2}"
 			clip-path="url(#avatar-clip)"
