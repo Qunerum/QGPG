@@ -1,0 +1,57 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background-color: #0d1117;
+	color: #c9d1d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+.card {
+	background-color: #161b22;
+	border: 1px solid #30363d;
+	border-radius: 12px;
+	padding: 24px;
+	width: 360px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.card-header {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	border-bottom: 1px solid #30363d;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+}
+
+.avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 2px solid #58a6ff;
+}
+
+.card-header h2 {
+	margin: 0;
+	font-size: 18px;
+	color: #f0f6fc;
+}
+
+.card-header p {
+	margin: 4px 0 0 0;
+	color: #8b949e;
+	font-size: 14px;
+}
+
+.card-body p {
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+/* Klasa pomocnicza do ukrywania elementów w JS */
+.hidden {
+	display: none !important;
+}
