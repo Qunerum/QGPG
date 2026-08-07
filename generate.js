@@ -116,7 +116,7 @@ async function run() {
 		const radius = 45;
 		const chartCenterX = config.width / 2;
 		const chartCenterY = radius + 30;
-		let ty = 35 + radius * 2;
+		let ty = 60 + radius * 2;
 
 		chartSvg += `<circle cx="${chartCenterX}" cy="${chartCenterY}" r="${radius}" fill="none" stroke="#21262d" stroke-width="14" />`;
 
@@ -125,7 +125,7 @@ async function run() {
 			const endPercent = currentStart + (stat.percentage / 100);
 			chartSvg += drawArc(chartCenterX, chartCenterY, radius, currentStart, endPercent, color);
 			currentStart = endPercent;
-			chartSvg += drawText(40, ty, 10, color, stat.name, `(${stat.percentage}%)`);
+			chartSvg += drawText(30, ty, 10, color, stat.name, `(${stat.percentage}%)`);
 			ty += 14;
 		});
 
