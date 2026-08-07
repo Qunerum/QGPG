@@ -20,9 +20,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="40" y="134" width="8" height="8" rx="2" fill="#58a6ff" />
-	<text x="56" y="140" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="120" y="140" font-family="monospace" font-size="10" fill="#58a6ff">(62.5%)</text>
+	<rect x="40" y="119" width="8" height="8" rx="2" fill="#58a6ff" />
+	<text x="56" y="125" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
+	<text x="120" y="125" font-family="monospace" font-size="10" fill="#58a6ff">(62.5%)</text>
 	</g>
 	
 	<circle
@@ -35,9 +35,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="40" y="148" width="8" height="8" rx="2" fill="#3fb950" />
-	<text x="56" y="154" font-family="monospace" font-size="10" fill="#3fb950">C#</text>
-	<text x="120" y="154" font-family="monospace" font-size="10" fill="#3fb950">(36.4%)</text>
+	<rect x="40" y="133" width="8" height="8" rx="2" fill="#3fb950" />
+	<text x="56" y="139" font-family="monospace" font-size="10" fill="#3fb950">C#</text>
+	<text x="120" y="139" font-family="monospace" font-size="10" fill="#3fb950">(36.4%)</text>
 	</g>
 	
 	<circle
@@ -50,9 +50,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="40" y="162" width="8" height="8" rx="2" fill="#d29922" />
-	<text x="56" y="168" font-family="monospace" font-size="10" fill="#d29922">JavaScript</text>
-	<text x="120" y="168" font-family="monospace" font-size="10" fill="#d29922">(0.7%)</text>
+	<rect x="40" y="147" width="8" height="8" rx="2" fill="#d29922" />
+	<text x="56" y="153" font-family="monospace" font-size="10" fill="#d29922">JavaScript</text>
+	<text x="120" y="153" font-family="monospace" font-size="10" fill="#d29922">(0.7%)</text>
 	</g>
 	
 	<circle
@@ -65,8 +65,8 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="40" y="176" width="8" height="8" rx="2" fill="#f85149" />
-	<text x="56" y="182" font-family="monospace" font-size="10" fill="#f85149">Assembly</text>
-	<text x="120" y="182" font-family="monospace" font-size="10" fill="#f85149">(0.4%)</text>
+	<rect x="40" y="161" width="8" height="8" rx="2" fill="#f85149" />
+	<text x="56" y="167" font-family="monospace" font-size="10" fill="#f85149">Assembly</text>
+	<text x="120" y="167" font-family="monospace" font-size="10" fill="#f85149">(0.4%)</text>
 	</g>
 	</g></svg>
