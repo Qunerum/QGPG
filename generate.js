@@ -30,74 +30,55 @@ async function fetchAllLanguages(username, token) {
 	}
 }
 
-async function generateLanguageChart(config, token) {
-	const languages = await fetchAllLanguages(config.username, token);
+async function getSortedLanguageStats(username, token) {
+	const allLanguages = await fetchAllLanguages(username, token);
+	const totalBytes = Object.values(allLanguages).reduce((a, b) => a + b, 0);
 
-	if (Object.keys(languages).length === 0) {
-		return `<text x="${config.width - 150}" y="${config.height - 30}" fill="#ff0000" font-family="sans-serif" font-size="12">Brak danych o językach</text>`;
+	if (totalBytes === 0) return [];
+
+	let sorted = Object.entries(allLanguages).sort((a, b) => b[1] - a[1]);
+
+	if (sorted.length > 7) {
+		const top6 = sorted.slice(0, 6);
+		const otherBytes = sorted.slice(6).reduce((sum, [, bytes]) => sum + bytes, 0);
+		sorted = [...top6, ["Other", otherBytes]];
 	}
 
-	const sortedLanguages = Object.entries(languages).sort((a, b) => b[1] - a[1]);
+	const stats = sorted.map(([name, bytes]) => ({
+		name: name,
+		bytes: bytes,
+		percentage: parseFloat(((bytes / totalBytes) * 100).toFixed(1))
+	}));
 
-	let finalLanguages = sortedLanguages;
-	if (sortedLanguages.length >= 7) {
-		const topLanguages = sortedLanguages.slice(0, 6);
-		const otherLanguages = sortedLanguages.slice(6);
+	return stats;
+}
 
-		const otherBytes = otherLanguages.reduce((sum, [, bytes]) => sum + bytes, 0);
-
-		finalLanguages = [...topLanguages, ["Other", otherBytes]];
-	}
-
-	const totalBytes = finalLanguages.reduce((sum, [, bytes]) => sum + bytes, 0);
-
-	const radius = 45;
+function drawArc(x, y, radius, startPercent, endPercent, color, thickness = 14) {
 	const circumference = 2 * Math.PI * radius;
-	let accumulatedOffset = 0;
+	const length = (endPercent - startPercent) * circumference;
+	const offset = startPercent * circumference;
 
-	const colors = ["#58a6ff", "#3fb950", "#d29922", "#f85149", "#a371f7", "#db6d28", "#8b949e"];
-	let colorIndex = 0;
+	return `
+	<circle
+	cx="${x}" cy="${y}" r="${radius}"
+	fill="none"
+	stroke="${color}"
+	stroke-width="${thickness}"
+	stroke-dasharray="${length} ${circumference}"
+	stroke-dashoffset="${-offset}"
+	transform="rotate(-90 ${x} ${y})"
+	/>`;
+}
 
-	const chartCenterX = config.width - 70;
-	const chartCenterY = config.height - 70;
-
-	let chartSvg = `<g>\n`;
-
-	chartSvg += `    <g transform="translate(${chartCenterX}, ${chartCenterY})">\n`;
-	chartSvg += `        <circle cx="0" cy="0" r="${radius}" fill="none" stroke="#21262d" stroke-width="14" />\n`;
-
-	for (const [lang, bytes] of finalLanguages) {
-		const percentage = bytes / totalBytes;
-		const strokeLength = circumference * percentage;
-
-		const color = (lang === "Other") ? "#8b949e" : colors[colorIndex % (colors.length - 1)];
-
-		chartSvg += `        <circle cx="0" cy="0" r="${radius}" fill="none" stroke="${color}" stroke-width="14" stroke-dasharray="${strokeLength} ${circumference - strokeLength}" stroke-dashoffset="${-accumulatedOffset}" />\n`;
-
-		accumulatedOffset += strokeLength;
-		if (lang !== "Other") colorIndex++;
-	}
-	chartSvg += `    </g>\n`;
-
-	let legendX = chartCenterX - 180;
-	let legendY = chartCenterY - (finalLanguages.length * 9);
-	if (legendY < 20) legendY = 20;
-
-	colorIndex = 0;
-	for (const [lang, bytes] of finalLanguages) {
-		const color = (lang === "Other") ? "#8b949e" : colors[colorIndex % (colors.length - 1)];
-		const percent = ((bytes / totalBytes) * 100).toFixed(1);
-
-		chartSvg += `    <!-- Legenda: ${lang} -->\n`;
-		chartSvg += `    <rect x="${legendX}" y="${legendY}" width="10" height="10" rx="2" fill="${color}" />\n`;
-		chartSvg += `    <text x="${legendX + 16}" y="${legendY + 9}" class="lang-text">${lang} (${percent}%)</text>\n`;
-
-		legendY += 18;
-		if (lang !== "Other") colorIndex++;
-	}
-
-	chartSvg += `</g>`;
-	return chartSvg;
+function drawText(x, y, size, color, name, percentageText) {
+	const rectSize = size * 0.8, rectY = y - rectSize + 2;
+	return `
+	<g>
+	<rect x="${x}" y="${rectY}" width="${rectSize}" height="${rectSize}" rx="2" fill="${color}" />
+	<text x="${x + rectSize + 8}" y="${y}" font-family="monospace" font-size="${size}" fill="${color}">${name}</text>
+	<text x="${x + 80}" y="${y}" font-family="monospace" font-size="${size}" fill="${color}">${percentageText}</text>
+	</g>
+	`;
 }
 
 async function run() {
@@ -109,11 +90,7 @@ async function run() {
 		if (!response.ok) {
 			throw new Error(`Cannot get user data: ${response.statusText}`);
 		}
-		const data = await response.json(),
-		avatarRes = await fetch(data.avatar_url),
-		avatarBuffer = await avatarRes.arrayBuffer(),
-		avatarBase64 = Buffer.from(avatarBuffer).toString('base64'),
-		avatarDataUrl = `data:image/png;base64,${avatarBase64}`;
+		const data = await response.json();
 
 		let w = config.width + config.sizes.background_frame * 2,
 		h = config.height + config.sizes.background_frame * 2,
@@ -125,85 +102,35 @@ async function run() {
 			stroke-width: ${config.sizes.background_frame};
 			rx: 12px;
 		}
-		.displayName {
-			fill: #${config.colors.display_name};
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-			font-size: 16px;
-			font-weight: bold;
-		}
-		.login {
-			fill: #${config.colors.login};
-			font-family: sans-serif;
-			font-size: 12px;
-		}
-		.bio {
-			fill: #${config.colors.bio};
-			font-family: sans-serif;
-			font-size: 12px;
-		}
-		.text-stat {
-			fill: #${config.colors.stats};
-			font-family: sans-serif;
-			font-size: 14px;
-		}
-		.lang-text {
-			fill: #${config.colors.stats};
-			font-family: sans-serif;
-			font-size: 12px;
-		}
 		</style>
 
 		<rect x="${config.sizes.background_frame}" y="${config.sizes.background_frame}" width="${config.width}" height="${config.height}" class="bg"/>
 		`;
-		let x = 24, y = 24;
-		if (config.show.profile) {
-			svgContent += `
-			<defs>
-			<clipPath id="avatar-clip">
-			<circle cx="${x + config.sizes.profile_radius}" cy="${y + config.sizes.profile_radius}" r="${config.sizes.profile_radius}"/>
-			</clipPath>
-			</defs>
-			<circle cx="${x + config.sizes.profile_radius}" cy="${y + config.sizes.profile_radius}" r="${config.sizes.profile_radius}" fill="none" stroke="#${config.colors.profile_frame}" stroke-width="${config.sizes.profile_frame_size}"/>
-			<image
-			href="${avatarDataUrl}"
-			x="${x}" y="${y}"
-			width="${config.sizes.profile_radius * 2}" height="${config.sizes.profile_radius * 2}"
-			clip-path="url(#avatar-clip)"
-			/>
-			`;
-			x += config.sizes.profile_radius * 2 + 20;
-		}
-		if (config.show.name) {
-			y += 16;
-			const displayName = data.name || data.login;
-			svgContent += `\t<text x="${x}" y="${y}" class="displayName">${displayName}</text>\n`;
-			y += 16;
-			svgContent += `\t<text x="${x}" y="${y}" class="login">@${data.login}</text>\n`;
-			y += 16;
-		}
-		if (config.show.bio) {
-			const userBio = data.bio || config.null.bio;
-			svgContent += `\t<text x="${x}" y="${y}" class="bio">${userBio}</text>\n`;
-			y += 16;
-		}
 
-		x = 24
-		if (config.show.profile) { y = config.sizes.profile_radius * 3; }
-		if (config.show.repo_count) {
-			svgContent += `\t<text x="${x}" y="${y}" class="text-stat">${config.texts.repos}${data.public_repos}</text>\n`;
-			y += 24;
-		}
-		if (config.show.followers_count) {
-			svgContent += `\t<text x="${x}" y="${y}" class="text-stat">${config.texts.followers}${data.followers}</text>\n`;
-			y += 24;
-		}
-		if (config.show.following_count) {
-			svgContent += `\t<text x="${x}" y="${y}" class="text-stat">${config.texts.following}${data.following}</text>\n`;
-			y += 24;
-		}
+		const stats = await getSortedLanguageStats(config.username, process.env.GH_TOKEN);
 
-		const languageChartSvg = await generateLanguageChart(config, process.env.GH_TOKEN);
-		svgContent += languageChartSvg;
+		let currentStart = 0;
+		let chartSvg = `<g>`;
+
+		const colors = ["#58a6ff", "#3fb950", "#d29922", "#f85149", "#a371f7", "#db6d28", "#8b949e"];
+		const radius = 45;
+		const chartCenterX = radius + 30;
+		const chartCenterY = radius + 30;
+		let ty = 50 + radius * 2;
+
+		chartSvg += `<circle cx="${chartCenterX}" cy="${chartCenterY}" r="${radius}" fill="none" stroke="#21262d" stroke-width="14" />`;
+
+		stats.forEach((stat, index) => {
+			const color = (stat.name === "Other") ? "#8b949e" : colors[index % (colors.length - 1)];
+			const endPercent = currentStart + (stat.percentage / 100);
+			chartSvg += drawArc(chartCenterX, chartCenterY, radius, currentStart, endPercent, color);
+			currentStart = endPercent;
+			chartSvg += drawText(20, ty, 10, color, stat.name, `(${stat.percentage}%)`);
+			ty += 16;
+		});
+
+		chartSvg += `</g>`;
+		svgContent += chartSvg;
 
 		svgContent += `</svg>`;
 		fs.writeFileSync('stats.svg', svgContent.trim());

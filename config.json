@@ -1,35 +1,11 @@
 {
-	"username": "Qunerum",
-	"width": 400, "height": 300,
-	"show": {
-		"profile": true,
-		"name": true,
-		"bio": true,
-		"repo_count": true,
-		"followers_count": true,
-		"following_count": false,
-		"repo_languages": true
-	},
+	"username": "qunerum",
+	"width": 400, "height": 220,
 	"sizes": {
-		"background_frame": 6,
-		"profile_radius": 46,
-		"profile_frame_size": 6
+		"background_frame": 6
 	},
 	"colors": {
 		"background_frame": "F0B2BC",
-		"background": "161B22",
-		"display_name": "EEEEEE",
-		"login": "666666",
-		"bio": "EEEEEE",
-		"stats": "C9D1D9",
-		"profile_frame": "A90000"
-	},
-	"texts": {
-		"repos": "Public repositories: ",
-		"followers": "Followers: ",
-		"following": "Following: "
-	},
-	"null": {
-		"bio": "Empty bio..."
+		"background": "161B22"
 	}
 }

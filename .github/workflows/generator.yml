@@ -1,4 +1,4 @@
-name: Aktualizuj Statystyki GitHub
+name: Update GitHub stats
 
 on:
   schedule:
@@ -13,19 +13,24 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repozytorium
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Konfiguracja Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
-      - name: Uruchom generator
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run generation script
         run: node generate.js
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Zapisz zmiany w repozytorium
+      - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automatyczna aktualizacja statystyk SVG [skip ci]"
+          commit_message: "Automatic update of stats.svg"
           file_pattern: stats.svg
