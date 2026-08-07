@@ -116,7 +116,7 @@ async function run() {
 		const radius = 45;
 		const chartCenterX = config.width / 2;
 		const chartCenterY = radius + 30;
-		let ty = 50 + radius * 2;
+		let ty = 35 + radius * 2;
 
 		chartSvg += `<circle cx="${chartCenterX}" cy="${chartCenterY}" r="${radius}" fill="none" stroke="#21262d" stroke-width="14" />`;
 
