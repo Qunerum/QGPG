@@ -38,10 +38,10 @@ async function getSortedLanguageStats(username, token) {
 
 	let sorted = Object.entries(allLanguages).sort((a, b) => b[1] - a[1]);
 
-	if (sorted.length > 7) {
-		const top6 = sorted.slice(0, 6);
-		const otherBytes = sorted.slice(6).reduce((sum, [, bytes]) => sum + bytes, 0);
-		sorted = [...top6, ["Other", otherBytes]];
+	if (sorted.length > 5) {
+		const top = sorted.slice(0, 4);
+		const otherBytes = sorted.slice(4).reduce((sum, [, bytes]) => sum + bytes, 0);
+		sorted = [...top, ["Other", otherBytes]];
 	}
 
 	const stats = sorted.map(([name, bytes]) => ({
