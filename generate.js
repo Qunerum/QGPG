@@ -125,7 +125,7 @@ async function run() {
 			const endPercent = currentStart + (stat.percentage / 100);
 			chartSvg += drawArc(chartCenterX, chartCenterY, radius, currentStart, endPercent, color);
 			currentStart = endPercent;
-			chartSvg += drawText(20, ty, 10, color, stat.name, `(${stat.percentage}%)`);
+			chartSvg += drawText(40, ty, 10, color, stat.name, `(${stat.percentage}%)`);
 			ty += 14;
 		});
 
