@@ -15,14 +15,14 @@
 	fill="none"
 	stroke="#58a6ff"
 	stroke-width="14"
-	stroke-dasharray="276.5229853689736 282.7433388230814"
+	stroke-dasharray="275.3920120136813 282.7433388230814"
 	stroke-dashoffset="0"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="144" width="8" height="8" rx="2" fill="#58a6ff" />
 	<text x="46" y="150" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(97.8%)</text>
+	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(97.4%)</text>
 	</g>
 	
 	<circle
@@ -30,14 +30,14 @@
 	fill="none"
 	stroke="#3fb950"
 	stroke-width="14"
-	stroke-dasharray="4.806636759992388 282.7433388230814"
-	stroke-dashoffset="-276.5229853689736"
+	stroke-dasharray="4.523893421169306 282.7433388230814"
+	stroke-dashoffset="-275.3920120136813"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="158" width="8" height="8" rx="2" fill="#3fb950" />
 	<text x="46" y="164" font-family="monospace" font-size="10" fill="#3fb950">JavaScript</text>
-	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(1.7%)</text>
+	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(1.6%)</text>
 	</g>
 	
 	<circle
@@ -46,12 +46,27 @@
 	stroke="#d29922"
 	stroke-width="14"
 	stroke-dasharray="1.4137166941154082 282.7433388230814"
-	stroke-dashoffset="-281.329622128966"
+	stroke-dashoffset="-279.91590543485063"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="172" width="8" height="8" rx="2" fill="#d29922" />
 	<text x="46" y="178" font-family="monospace" font-size="10" fill="#d29922">Assembly</text>
 	<text x="110" y="178" font-family="monospace" font-size="10" fill="#d29922">(0.5%)</text>
+	</g>
+	
+	<circle
+	cx="90" cy="75" r="45"
+	fill="none"
+	stroke="#f85149"
+	stroke-width="14"
+	stroke-dasharray="1.4137166941153767 282.7433388230814"
+	stroke-dashoffset="-281.32962212896604"
+	transform="rotate(-90 90 75)"
+	/>
+	<g>
+	<rect x="30" y="186" width="8" height="8" rx="2" fill="#f85149" />
+	<text x="46" y="192" font-family="monospace" font-size="10" fill="#f85149">Makefile</text>
+	<text x="110" y="192" font-family="monospace" font-size="10" fill="#f85149">(0.5%)</text>
 	</g>
 	</g></svg>
