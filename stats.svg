@@ -15,14 +15,14 @@
 	fill="none"
 	stroke="#58a6ff"
 	stroke-width="14"
-	stroke-dasharray="274.26103865838894 282.7433388230814"
+	stroke-dasharray="275.1092686748582 282.7433388230814"
 	stroke-dashoffset="0"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="144" width="8" height="8" rx="2" fill="#58a6ff" />
 	<text x="46" y="150" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(97%)</text>
+	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(97.3%)</text>
 	</g>
 	
 	<circle
@@ -30,14 +30,14 @@
 	fill="none"
 	stroke="#3fb950"
 	stroke-width="14"
-	stroke-dasharray="4.241150082346224 282.7433388230814"
-	stroke-dashoffset="-274.26103865838894"
+	stroke-dasharray="3.958406743523143 282.7433388230814"
+	stroke-dashoffset="-275.1092686748582"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="158" width="8" height="8" rx="2" fill="#3fb950" />
 	<text x="46" y="164" font-family="monospace" font-size="10" fill="#3fb950">JavaScript</text>
-	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(1.5%)</text>
+	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(1.4%)</text>
 	</g>
 	
 	<circle
@@ -45,14 +45,14 @@
 	fill="none"
 	stroke="#d29922"
 	stroke-width="14"
-	stroke-dasharray="2.261946710584653 282.7433388230814"
-	stroke-dashoffset="-278.50218874073516"
+	stroke-dasharray="1.9792033717615716 282.7433388230814"
+	stroke-dashoffset="-279.0676754183813"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="172" width="8" height="8" rx="2" fill="#d29922" />
 	<text x="46" y="178" font-family="monospace" font-size="10" fill="#d29922">Assembly</text>
-	<text x="110" y="178" font-family="monospace" font-size="10" fill="#d29922">(0.8%)</text>
+	<text x="110" y="178" font-family="monospace" font-size="10" fill="#d29922">(0.7%)</text>
 	</g>
 	
 	<circle
@@ -60,13 +60,13 @@
 	fill="none"
 	stroke="#f85149"
 	stroke-width="14"
-	stroke-dasharray="1.9792033717615716 282.7433388230814"
-	stroke-dashoffset="-280.7641354513198"
+	stroke-dasharray="1.6964600329384898 282.7433388230814"
+	stroke-dashoffset="-281.0468787901429"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="186" width="8" height="8" rx="2" fill="#f85149" />
 	<text x="46" y="192" font-family="monospace" font-size="10" fill="#f85149">Makefile</text>
-	<text x="110" y="192" font-family="monospace" font-size="10" fill="#f85149">(0.7%)</text>
+	<text x="110" y="192" font-family="monospace" font-size="10" fill="#f85149">(0.6%)</text>
 	</g>
 	</g></svg>
