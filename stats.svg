@@ -15,14 +15,14 @@
 	fill="none"
 	stroke="#58a6ff"
 	stroke-width="14"
-	stroke-dasharray="262.9513051054657 282.7433388230814"
+	stroke-dasharray="263.23404844428876 282.7433388230814"
 	stroke-dashoffset="0"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="144" width="8" height="8" rx="2" fill="#58a6ff" />
 	<text x="46" y="150" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(93%)</text>
+	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(93.1%)</text>
 	</g>
 	
 	<circle
@@ -30,14 +30,14 @@
 	fill="none"
 	stroke="#3fb950"
 	stroke-width="14"
-	stroke-dasharray="13.006193585861755 282.7433388230814"
-	stroke-dashoffset="-262.9513051054657"
+	stroke-dasharray="12.15796356939251 282.7433388230814"
+	stroke-dashoffset="-263.23404844428876"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="158" width="8" height="8" rx="2" fill="#3fb950" />
 	<text x="46" y="164" font-family="monospace" font-size="10" fill="#3fb950">JavaScript</text>
-	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(4.6%)</text>
+	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(4.3%)</text>
 	</g>
 	
 	<circle
@@ -45,14 +45,14 @@
 	fill="none"
 	stroke="#d29922"
 	stroke-width="14"
-	stroke-dasharray="2.544690049407735 282.7433388230814"
-	stroke-dashoffset="-275.9574986913275"
+	stroke-dasharray="2.8274333882308165 282.7433388230814"
+	stroke-dashoffset="-275.39201201368127"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="172" width="8" height="8" rx="2" fill="#d29922" />
 	<text x="46" y="178" font-family="monospace" font-size="10" fill="#d29922">CSS</text>
-	<text x="110" y="178" font-family="monospace" font-size="10" fill="#d29922">(0.9%)</text>
+	<text x="110" y="178" font-family="monospace" font-size="10" fill="#d29922">(1%)</text>
 	</g>
 	
 	<circle
@@ -61,7 +61,7 @@
 	stroke="#f85149"
 	stroke-width="14"
 	stroke-dasharray="1.6964600329384898 282.7433388230814"
-	stroke-dashoffset="-278.5021887407352"
+	stroke-dashoffset="-278.2194454019121"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -75,8 +75,8 @@
 	fill="none"
 	stroke="#8b949e"
 	stroke-width="14"
-	stroke-dasharray="2.5446900494077034 282.7433388230814"
-	stroke-dashoffset="-280.1986487736737"
+	stroke-dasharray="2.544690049407735 282.7433388230814"
+	stroke-dashoffset="-279.9159054348506"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
