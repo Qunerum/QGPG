@@ -15,14 +15,14 @@
 	fill="none"
 	stroke="#58a6ff"
 	stroke-width="14"
-	stroke-dasharray="259.2756417007656 282.7433388230814"
+	stroke-dasharray="258.99289836194254 282.7433388230814"
 	stroke-dashoffset="0"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="144" width="8" height="8" rx="2" fill="#58a6ff" />
 	<text x="46" y="150" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(91.7%)</text>
+	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(91.6%)</text>
 	</g>
 	
 	<circle
@@ -30,14 +30,14 @@
 	fill="none"
 	stroke="#3fb950"
 	stroke-width="14"
-	stroke-dasharray="14.985396957623326 282.7433388230814"
-	stroke-dashoffset="-259.2756417007656"
+	stroke-dasharray="15.268140296446408 282.7433388230814"
+	stroke-dashoffset="-258.99289836194254"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="158" width="8" height="8" rx="2" fill="#3fb950" />
 	<text x="46" y="164" font-family="monospace" font-size="10" fill="#3fb950">JavaScript</text>
-	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(5.3%)</text>
+	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(5.4%)</text>
 	</g>
 	
 	<circle
@@ -46,7 +46,7 @@
 	stroke="#d29922"
 	stroke-width="14"
 	stroke-dasharray="3.958406743523143 282.7433388230814"
-	stroke-dashoffset="-274.261038658389"
+	stroke-dashoffset="-274.26103865838894"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -61,7 +61,7 @@
 	stroke="#f85149"
 	stroke-width="14"
 	stroke-dasharray="1.6964600329384898 282.7433388230814"
-	stroke-dashoffset="-278.21944540191214"
+	stroke-dashoffset="-278.2194454019121"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -75,8 +75,8 @@
 	fill="none"
 	stroke="#8b949e"
 	stroke-width="14"
-	stroke-dasharray="2.827433388230785 282.7433388230814"
-	stroke-dashoffset="-279.91590543485063"
+	stroke-dasharray="2.8274333882308165 282.7433388230814"
+	stroke-dashoffset="-279.9159054348506"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
