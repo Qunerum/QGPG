@@ -20,9 +20,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="30" y="144" width="8" height="8" rx="2" fill="#58a6ff" />
-	<text x="46" y="150" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(94.6%)</text>
+	<rect x="30" y="138" width="8" height="8" rx="2" fill="#58a6ff" />
+	<text x="46" y="144" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
+	<text x="110" y="144" font-family="monospace" font-size="10" fill="#58a6ff">(94.6%)</text>
 	</g>
 	
 	<circle
@@ -35,9 +35,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="30" y="158" width="8" height="8" rx="2" fill="#3fb950" />
-	<text x="46" y="164" font-family="monospace" font-size="10" fill="#3fb950">JavaScript</text>
-	<text x="110" y="164" font-family="monospace" font-size="10" fill="#3fb950">(3.4%)</text>
+	<rect x="30" y="154" width="8" height="8" rx="2" fill="#3fb950" />
+	<text x="46" y="160" font-family="monospace" font-size="10" fill="#3fb950">JavaScript</text>
+	<text x="110" y="160" font-family="monospace" font-size="10" fill="#3fb950">(3.4%)</text>
 	</g>
 	
 	<circle
@@ -50,9 +50,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="30" y="172" width="8" height="8" rx="2" fill="#d29922" />
-	<text x="46" y="178" font-family="monospace" font-size="10" fill="#d29922">CSS</text>
-	<text x="110" y="178" font-family="monospace" font-size="10" fill="#d29922">(0.9%)</text>
+	<rect x="30" y="170" width="8" height="8" rx="2" fill="#d29922" />
+	<text x="46" y="176" font-family="monospace" font-size="10" fill="#d29922">CSS</text>
+	<text x="110" y="176" font-family="monospace" font-size="10" fill="#d29922">(0.9%)</text>
 	</g>
 	
 	<circle
@@ -80,9 +80,9 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="30" y="200" width="8" height="8" rx="2" fill="#a371f7" />
-	<text x="46" y="206" font-family="monospace" font-size="10" fill="#a371f7">Assembly</text>
-	<text x="110" y="206" font-family="monospace" font-size="10" fill="#a371f7">(0.4%)</text>
+	<rect x="30" y="202" width="8" height="8" rx="2" fill="#a371f7" />
+	<text x="46" y="208" font-family="monospace" font-size="10" fill="#a371f7">Assembly</text>
+	<text x="110" y="208" font-family="monospace" font-size="10" fill="#a371f7">(0.4%)</text>
 	</g>
 	
 	<circle
@@ -95,8 +95,8 @@
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="30" y="214" width="8" height="8" rx="2" fill="#db6d28" />
-	<text x="46" y="220" font-family="monospace" font-size="10" fill="#db6d28">HTML</text>
-	<text x="110" y="220" font-family="monospace" font-size="10" fill="#db6d28">(0.2%)</text>
+	<rect x="30" y="218" width="8" height="8" rx="2" fill="#db6d28" />
+	<text x="46" y="224" font-family="monospace" font-size="10" fill="#db6d28">HTML</text>
+	<text x="110" y="224" font-family="monospace" font-size="10" fill="#db6d28">(0.2%)</text>
 	</g>
 	</g></svg>
