@@ -15,14 +15,14 @@
 	fill="none"
 	stroke="#58a6ff"
 	stroke-width="14"
-	stroke-dasharray="267.1924551878119 282.7433388230814"
+	stroke-dasharray="267.475198526635 282.7433388230814"
 	stroke-dashoffset="0"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="144" width="8" height="8" rx="2" fill="#58a6ff" />
 	<text x="46" y="150" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(94.5%)</text>
+	<text x="110" y="150" font-family="monospace" font-size="10" fill="#58a6ff">(94.6%)</text>
 	</g>
 	
 	<circle
@@ -31,7 +31,7 @@
 	stroke="#3fb950"
 	stroke-width="14"
 	stroke-dasharray="9.613273519984777 282.7433388230814"
-	stroke-dashoffset="-267.1924551878119"
+	stroke-dashoffset="-267.475198526635"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -46,7 +46,7 @@
 	stroke="#d29922"
 	stroke-width="14"
 	stroke-dasharray="2.544690049407735 282.7433388230814"
-	stroke-dashoffset="-276.8057287077967"
+	stroke-dashoffset="-277.08847204661976"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -61,7 +61,7 @@
 	stroke="#f85149"
 	stroke-width="14"
 	stroke-dasharray="1.4137166941154082 282.7433388230814"
-	stroke-dashoffset="-279.3504187572044"
+	stroke-dashoffset="-279.6331620960275"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -73,15 +73,30 @@
 	<circle
 	cx="90" cy="75" r="45"
 	fill="none"
-	stroke="#8b949e"
+	stroke="#a371f7"
 	stroke-width="14"
-	stroke-dasharray="1.9792033717615716 282.7433388230814"
-	stroke-dashoffset="-280.7641354513198"
+	stroke-dasharray="1.1309733552923265 282.7433388230814"
+	stroke-dashoffset="-281.0468787901429"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
-	<rect x="30" y="200" width="8" height="8" rx="2" fill="#8b949e" />
-	<text x="46" y="206" font-family="monospace" font-size="10" fill="#8b949e">Other</text>
-	<text x="110" y="206" font-family="monospace" font-size="10" fill="#8b949e">(0.7%)</text>
+	<rect x="30" y="200" width="8" height="8" rx="2" fill="#a371f7" />
+	<text x="46" y="206" font-family="monospace" font-size="10" fill="#a371f7">Assembly</text>
+	<text x="110" y="206" font-family="monospace" font-size="10" fill="#a371f7">(0.4%)</text>
+	</g>
+	
+	<circle
+	cx="90" cy="75" r="45"
+	fill="none"
+	stroke="#db6d28"
+	stroke-width="14"
+	stroke-dasharray="0.5654866776461632 282.7433388230814"
+	stroke-dashoffset="-282.1778521454352"
+	transform="rotate(-90 90 75)"
+	/>
+	<g>
+	<rect x="30" y="214" width="8" height="8" rx="2" fill="#db6d28" />
+	<text x="46" y="220" font-family="monospace" font-size="10" fill="#db6d28">HTML</text>
+	<text x="110" y="220" font-family="monospace" font-size="10" fill="#db6d28">(0.2%)</text>
 	</g>
 	</g></svg>
