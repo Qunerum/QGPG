@@ -15,14 +15,14 @@
 	fill="none"
 	stroke="#58a6ff"
 	stroke-width="14"
-	stroke-dasharray="268.04068520428115 282.7433388230814"
+	stroke-dasharray="268.3234285431042 282.7433388230814"
 	stroke-dashoffset="0"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
 	<rect x="30" y="142" width="8" height="8" rx="2" fill="#58a6ff" />
 	<text x="46" y="148" font-family="monospace" font-size="10" fill="#58a6ff">C</text>
-	<text x="110" y="148" font-family="monospace" font-size="10" fill="#58a6ff">(94.8%)</text>
+	<text x="110" y="148" font-family="monospace" font-size="10" fill="#58a6ff">(94.9%)</text>
 	</g>
 	
 	<circle
@@ -31,7 +31,7 @@
 	stroke="#3fb950"
 	stroke-width="14"
 	stroke-dasharray="9.330530181161693 282.7433388230814"
-	stroke-dashoffset="-268.04068520428115"
+	stroke-dashoffset="-268.3234285431042"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -46,7 +46,7 @@
 	stroke="#d29922"
 	stroke-width="14"
 	stroke-dasharray="2.261946710584653 282.7433388230814"
-	stroke-dashoffset="-277.37121538544284"
+	stroke-dashoffset="-277.653958724266"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -61,7 +61,7 @@
 	stroke="#f85149"
 	stroke-width="14"
 	stroke-dasharray="1.1309733552923265 282.7433388230814"
-	stroke-dashoffset="-279.6331620960275"
+	stroke-dashoffset="-279.91590543485063"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -76,7 +76,7 @@
 	stroke="#a371f7"
 	stroke-width="14"
 	stroke-dasharray="1.1309733552923265 282.7433388230814"
-	stroke-dashoffset="-280.7641354513198"
+	stroke-dashoffset="-281.04687879014296"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
@@ -90,8 +90,8 @@
 	fill="none"
 	stroke="#db6d28"
 	stroke-width="14"
-	stroke-dasharray="0.5654866776461632 282.7433388230814"
-	stroke-dashoffset="-281.89510880661214"
+	stroke-dasharray="0.5654866776461319 282.7433388230814"
+	stroke-dashoffset="-282.1778521454353"
 	transform="rotate(-90 90 75)"
 	/>
 	<g>
